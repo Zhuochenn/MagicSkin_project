@@ -59,15 +59,15 @@
     .hero .hero-body { padding-top: 3rem; padding-bottom: 2rem; }
     .kicker { letter-spacing: .08em; text-transform: uppercase; color: var(--accent); font-weight: 700; font-size: .85rem; }
 
-    /* Video grid: two columns on >= 769px, one column on mobile */
+    /* Video grid: single centered column */
     .video-grid {
       display: grid;
       grid-template-columns: 1fr;
       gap: 26px;
       margin-top: 18px;
-    }
-    @media (min-width: 769px) {
-      .video-grid { grid-template-columns: 1fr 1fr; }
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
     }
     .video-item {
       background: #fff;
@@ -159,7 +159,7 @@
       <div class="columns is-centered">
         <div class="column is-four-fifths">
           <div class="content">
-            <p class="is-size-5">
+            <p class="is-size-6">
               Vision-based tactile sensors (VBTS) face a fundamental trade-off in marker and markerless design on the tactile skin: opaque ink markers enable measurement of force and tangential displacement but completely occlude geometric features necessary for object and texture classification, while markerless skin preserves surface details but struggles in measuring tangential displacements effectively. Current practice to solve the above problem via UV lighting or virtual transfer using learning-based models introduces hardware complexity or computing burdens. This paper introduces MagicSkin, a novel tactile skin with translucent, tinted markers balancing the modes of marker and markerless for VBTS.  It enables simultaneous tangential displacement tracking, force prediction, and surface detail preservation. This skin is easy to plug into GelSight-family sensors without requiring additional hardware or software tools. We comprehensively evaluate MagicSkin in downstream tasks. The translucent markers impressively enhance rather than degrade sensing performance compared with traditional markerless and inked marker design: it achieves best performance in object classification (99.17\%), texture classification (93.51\%), tangential displacement tracking (97\% point retention) and force prediction (66\% improvement in total force error). These experimental results demonstrate that translucent skin eliminates the traditional performance trade-off in marker or markerless modes, paving the way for multimodal tactile sensing essential in tactile robotics.
             </p>
           </div>
