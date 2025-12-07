@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>MagicSkin</title>
+  <meta name="description" content="MagicSkin: Balancing Marker and Markerless Modes in Vision-Based Tactile Sensors with a Translucent Skin">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="icon" type="image/png" href="./images/logo_ro.png">
+
+  <!-- Fonts and CSS -->
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans:400,500,700|Noto+Sans:400,600|Castoro:400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <!-- JS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+
+  <style>
+    :root {
+      --maxw: 1100px;
+      --accent: #0f62fe; 
+    }
+    html, body {
+      font-family: "Noto Sans", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color: #1f2937;
+      scroll-behavior: smooth;
+    }
+    .container.is-max-desktop { max-width: var(--maxw); }
+    .publication-title { line-height: 1.25; }
+    .section { padding-top: 3rem; padding-bottom: 3rem; }
+    .content p, .content li { line-height: 1.75; font-size: 1.05rem; }
+    .subtitle-muted { color: #6b7280; }
+
+    /* Authors and affiliations */
+    .authors { font-size: 1.05rem; line-height: 1.6; margin-top: .75rem; }
+    .authors a { color: #1f2937; text-decoration: none; }
+    .authors a:hover { text-decoration: underline; }
+    .authors sup { font-size: 0.7em; top: -0.6em; }
+    .affiliations { margin-top: .5rem; color: #4b5563; font-size: .98rem; }
+    .affiliations li { list-style: none; }
+    .notes { color: #6b7280; font-size: .95rem; margin-top: .25rem; }
+
+    /* Buttons row */
+    .link-row .button { margin: .25rem .35rem; }
+    .button.is-dark { background: #111827; }
+    .button.is-dark:hover { background: #000; }
+
+    /* Figures and captions */
+    figure { margin: 1.25rem auto; }
+    figure img { width: 100%; height: auto; border-radius: 6px; }
+    figcaption { color: #6b7280; font-size: .95rem; margin-top: .4rem; }
+    .box.section-box { padding: 2rem 1.5rem; }
+
+    /* Hero */
+    .hero .hero-body { padding-top: 3rem; padding-bottom: 2rem; }
+    .kicker { letter-spacing: .08em; text-transform: uppercase; color: var(--accent); font-weight: 700; font-size: .85rem; }
+
+    /* Video grid: two columns on >= 769px, one column on mobile */
+    .video-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 26px;
+      margin-top: 18px;
+    }
+    @media (min-width: 769px) {
+      .video-grid { grid-template-columns: 1fr 1fr; }
+    }
+    .video-item {
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      padding: 12px;
+      box-shadow: 0 1px 2px rgba(0,0,0,.03);
+    }
+    .ratio-16x9 {
+      position: relative; width: 100%; padding-bottom: 56.25%; overflow: hidden; border-radius: 8px;
+    }
+    .ratio-16x9 iframe {
+      position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;
+    }
+    .video-title { font-weight: 600; margin: 10px 2px 0; }
+  </style>
+</head>
+
+<body>
+
+  <!-- Hero / Title -->
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+
+            <p class="kicker">GenForce</p>
+            <h1 class="title is-2 publication-title">
+              Training Tactile Sensors to <br> Learn Force Sensing from Each Other
+            </h1>
+
+            <style>
+              .authors .lead { color: #e91e63; }     /* lead authors */
+              .authors .co   { color: #333; }        /* co-authors */
+            </style>
+
+            <div class="authors">
+              <p>
+                <a class="lead" >Oluwatimilehin Tijani<sup>1*</sup></a>,
+                <a class="lead" href="https://zhuochenn.github.io/">Zhuo Chen<sup>1*</sup></a>,
+                <a class="lead" href="https://jiankangdeng.github.io/">Jiankang Deng<sup>2*</sup></a>,
+                <a class="lead" href="https://shanluo.github.io/">Shan Luo<sup>1*</sup></a>
+              </p>
+
+              <ul class="affiliations">
+                <li><sup>1</sup> King’s College London, London, United Kingdom</li>
+                <li><sup>2</sup> Imperial College London, London, United Kingdom</li>
+                <li><sup>*</sup> Contribute equally</li>
+              </ul>
+             
+              <!-- <p class="notes">* These authors contributed equally. ✉ Correspondence: your.email@kcl.ac.uk</p> -->
+            </div>
+
+            <!-- Action buttons -->
+            <div class="link-row" style="margin-top: 1rem;">
+              <a target="_blank" href="https://arxiv.org/abs/2503.01058" class="button is-small is-rounded is-dark">
+                <span class="icon"><i class="fas fa-file"></i></span><span>Arxiv</span>
+              </a>
+              <!-- <a target="_blank" href="" class="button is-small is-rounded is-dark">
+                <span class="icon"><i class="fab fa-github"></i></span><span>Code(To release)</span>
+              </a>
+              <a target="_blank" href="" class="button is-small is-rounded is-dark">
+                <span class="icon"><i class="fas fa-database"></i></span><span>Dataset (To release)</span> -->
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Background -->
+  <!-- <section class="section">
+    <div class="container is-max-desktop">
+      <div class="box section-box">
+        <h2 class="title is-3 has-text-centered">Highlight</h2>
+        <figure>
+          <img src="images/first.png" alt="Background">
+        </figure>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- Abstract / Overview -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column is-four-fifths">
+          <div class="content">
+            <p class="is-size-5">
+              Vision-based tactile sensors (VBTS) face a fundamental trade-off in marker and markerless design on the tactile skin: opaque ink markers enable measurement of force and tangential displacement but completely occlude geometric features necessary for object and texture classification, while markerless skin preserves surface details but struggles in measuring tangential displacements effectively. Current practice to solve the above problem via UV lighting or virtual transfer using learning-based models introduces hardware complexity or computing burdens. This paper introduces MagicSkin, a novel tactile skin with translucent, tinted markers balancing the modes of marker and markerless for VBTS.  It enables simultaneous tangential displacement tracking, force prediction, and surface detail preservation. This skin is easy to plug into GelSight-family sensors without requiring additional hardware or software tools. We comprehensively evaluate MagicSkin in downstream tasks. The translucent markers impressively enhance rather than degrade sensing performance compared with traditional markerless and inked marker design: it achieves best performance in object classification (99.17\%), texture classification (93.51\%), tangential displacement tracking (97\% point retention) and force prediction (66\% improvement in total force error). These experimental results demonstrate that translucent skin eliminates the traditional performance trade-off in marker or markerless modes, paving the way for multimodal tactile sensing essential in tactile robotics.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Demo Videos (Two-column responsive grid) -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">
+        <span style="vertical-align: middle;">
+          <img src="images/video_logo.png" alt="Video icon" width="40" style="vertical-align: middle; margin-right: 8px;">
+        </span>
+        Video
+      </h2>
+
+      <div class="video-grid">
+        <!-- 1 -->
+        <div class="video-item">
+          <div class="ratio-16x9">
+           <iframe width="560" height="315" src="https://www.youtube.com/embed/S4ShQsFNqvo?si=aumLwfMi3Oy9yRcc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+          <div class="video-title" style="text-align:center;"></div>
+      </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Citation -->
+  <section class="section" id="Citation">
+    <div class="container is-max-desktop">
+      <div class="box section-box">
+        <h2 class="title is-3 has-text-centered">Citation</h2>
+        <div class="content">
+          <p>If you find our paper helpful, feel free to cite it:</p>
+<pre><code>
+  @article{chen2025general,
+  title={General Force Sensation for Tactile Robot},
+  author={Chen, Zhuo and Ou, Ni and Zhang, Xuyang and Wu, Zhiyuan
+          and Zhao, Yongqiang and Wang, Yupeng and Lepora, Nathan
+          and Jamone, Lorenzo and Deng, Jiankang and Luo, Shan},
+  journal={arXiv preprint arXiv:2503.01058},
+  year={2025}
+
+}</code></pre>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="section" style="padding-top: 1.5rem; padding-bottom: 2rem;">
+    <div class="container is-max-desktop has-text-centered">
+      <p class="subtitle-muted">© 2025 MagicSkin Authors</p>
+    </div>
+  </footer>
+
+</body>
+</html>
